@@ -175,7 +175,7 @@ class Numbering extends AbstractPart
 
         $xmlWriter->startElement('w:rPr');
 
-        $style = Style::getStyle('List '. $level->getLevel());
+        $style = Style::getStyle($level->getStyleName());
         if ($style instanceof Font) {
             // Color
             $color = $style->getColor();
